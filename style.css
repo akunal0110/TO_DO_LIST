@@ -1,0 +1,144 @@
+body{
+    margin:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right bottom, blue,indigo,violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 94vh;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.todo-app{
+    width:50%;
+    padding:40px 30px 70px;
+    background-color: rgb(214, 219, 244);
+    margin: 40px auto 40px;
+    border-radius: 50px;
+    max-width:540px;
+    box-shadow: 0 0 30px #afafaf;
+}
+h2{
+    color:rgb(18, 18, 146);
+    font-size:50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+h2 img{
+    width:50px;
+    position: absolute;
+    left: 85%;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding:7px;
+}
+input{
+    margin:10px;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    font-size: large;
+    flex:1;
+    letter-spacing: 1px;
+}
+input::placeholder{
+    color: rgb(117, 108, 106);
+}
+.AddTask{
+    background-color: rgb(18, 18, 146);
+    color:white;
+    outline:none;
+    border-radius: 30px;
+    margin:0;
+    padding:10px;
+    font-size: large;
+    width: 30%;
+    cursor: pointer;
+}
+.list-container{
+    margin-top:30px;
+}
+ul li{
+    list-style: none;
+    font-size: x-large;
+    margin:3px 40px 1px;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding:10px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height:20px;
+    width:20px;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    border-radius: 50%;
+    right:400px;
+    top:20px
+}
+
+.checked{
+    text-decoration: line-through;
+    color: grey;
+}
+
+ul li.checked::before{
+    background: url(images/checked.png);
+    background-size: cover;
+    height:30px;
+    width:30px;
+    right:395px;
+    top:5px;
+    border-radius: 30px;
+    background-color: rgb(81, 121, 70);
+    color:whitesmoke;
+    text-decoration: line-through;
+    color: grey;
+}
+ul li span{
+    position: absolute;
+    top:20px;
+    right:-60px;
+    margin-right: 15px;
+    width:30px;
+    height:30px;
+    line-height:1px;
+    font-size: x-large;
+    color:red;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    position: absolute;
+    top:8px;
+    right:-60px;
+    margin-right: 15px;
+    width:30px;
+    height:30px;
+    line-height:32px;
+    background-color: red;
+    color:white;
+}
+.deleteAll{
+    background-color: rgb(18, 18, 146);
+    color:white;
+    outline:none;
+    border-radius: 30px;
+    margin-inline:10px;
+    padding:10px;
+    font-size: large;
+    cursor: pointer;
+}
